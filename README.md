@@ -2,16 +2,22 @@
 
 The Stock API is a Java-based application . It provides functionality to create stocks, update,retrieve stock information and delete stock.
 
-Features Create a new stock with details such as name, current price, and creationDate,lastUpdate. Update the details of an existing stock. Retrieve stock information by ID. Delete stock information by Id. Get a paginated list of all stocks.
+Features
+Create a new stock with details such as name, current price. 
+Update the details of an existing stock. 
+Retrieve stock information by ID. 
+Delete stock information by Id.
+Get a paginated list of all stocks.
 
-Technologies Used:
+Technologies used:
 Java 
 Spring Boot 
 Spring Data JPA 
 MySQL 
 Maven
+Postman
 
-Creating a Stock To create a new stock;
+Creating a Stock To create a new stock:
 send a POST request to "api/v1/stocks/create" with the following payload:
 name (String): The name of the stock. currentPrice (Double): The current price of the stock. creationDate(TimeStamp):The date the stock was created. lastUpdate(TimeStamp):The date the stock was last updated
 
@@ -30,3 +36,7 @@ Delete Stock Information To delete information of a specific stock, send a delet
 
 Testing
 I have written comprehensive tests to ensure the functionality and reliability of the endpoints.  The testing framework used for this project is JUnit.
+
+
+
+
