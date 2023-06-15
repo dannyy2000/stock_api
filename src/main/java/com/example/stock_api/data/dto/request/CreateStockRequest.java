@@ -19,11 +19,6 @@ public class CreateStockRequest {
     @NotNull(message = "field name cannot be null")
     @NotEmpty(message = "field name cannot be empty")
     private Double currentPrice;
-    @NotNull(message = "field name cannot be null")
-    @NotEmpty(message = "field name cannot be empty")
-    private Timestamp creationDate;
-    @NotNull(message = "field name cannot be null")
-    @NotEmpty(message = "field name cannot be empty")
-    private Timestamp lastUpdate;
+
 
 }

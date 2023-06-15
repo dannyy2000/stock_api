@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import lombok.*;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Builder
 @Getter
@@ -20,7 +21,7 @@ public class Stock {
     private Long id;
     private String name;
     private Double currentPrice;
-    private Timestamp creationDate;
-    private Timestamp lastUpdate;
+    private LocalDate creationDate;
+    private LocalDate lastUpdate;
 
 }

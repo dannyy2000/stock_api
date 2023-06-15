@@ -32,14 +32,6 @@ class StockServiceImplTest {
        createStockRequest.setName("Unknown");
        createStockRequest.setCurrentPrice(70.00);
 
-        LocalDateTime now = LocalDateTime.now();
-        Timestamp creationDate = Timestamp.valueOf(now);
-        createStockRequest.setCreationDate(creationDate);
-
-        LocalDateTime lastUpdated = now.minusDays(1L);
-        Timestamp lastUpdate = Timestamp.valueOf(lastUpdated);
-        createStockRequest.setLastUpdate(lastUpdate);
-
     }
 
     @Test

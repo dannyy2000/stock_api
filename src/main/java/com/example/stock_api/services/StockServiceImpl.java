@@ -16,6 +16,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import static com.example.stock_api.AppUtilities.NUMBER_OF_ITEMS_PER_PAGE;
@@ -30,7 +32,12 @@ public class StockServiceImpl implements StockService{
     @Override
     public CreateStockResponse createStock(CreateStockRequest stockRequest) {
         log.info("Request to create a stock with payload={}",stockRequest);
-        Stock stock = mapper.map(stockRequest, Stock.class);
+        Stock stock = Stock.builder()
+                .name(stockRequest.getName())
+                .currentPrice(stockRequest.getCurrentPrice())
+                .creationDate(LocalDate.now())
+                .lastUpdate(LocalDate.now())
+                .build();
         Stock savedStock = stockRepository.save(stock);
         CreateStockResponse stockResponse = getStockResponse(savedStock);
         return stockResponse;

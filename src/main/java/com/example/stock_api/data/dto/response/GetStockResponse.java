@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -14,7 +15,7 @@ public class GetStockResponse {
     private Long id;
     private String name;
     private Double currentPrice;
-    private Timestamp creationDate;
-    private Timestamp lastUpdate;
+    private LocalDate creationDate;
+    private LocalDate lastUpdate;
 
 }
